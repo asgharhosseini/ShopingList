@@ -11,6 +11,8 @@ import dagger.hilt.android.testing.HiltAndroidRule
 import dagger.hilt.android.testing.HiltAndroidTest
 import ir.vbile.app.shopinglist.data.model.ShoppingItem
 import ir.vbile.app.shopinglist.getOrAwaitValue
+import ir.vbile.app.shopinglist.launchFragmentInHiltContainer
+import ir.vbile.app.shopinglist.ui.fragment.ShoppingFragment
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runBlockingTest
 import org.junit.After
@@ -46,6 +48,12 @@ class ShoppingDaoTest {
     @After
     fun teardown() {
         database.close()
+    }
+    @Test
+    fun testLaunchFragmentInHiltContainer() {
+        launchFragmentInHiltContainer<ShoppingFragment> {
+
+        }
     }
 
     @Test
