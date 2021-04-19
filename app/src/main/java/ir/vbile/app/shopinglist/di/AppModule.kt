@@ -8,6 +8,8 @@ import dagger.hilt.android.components.*
 import dagger.hilt.android.qualifiers.*
 import ir.vbile.app.shopinglist.data.local.*
 import ir.vbile.app.shopinglist.data.remote.*
+import ir.vbile.app.shopinglist.data.repositories.DefaultShoppingRepository
+import ir.vbile.app.shopinglist.data.repositories.ShoppingRepository
 import ir.vbile.app.shopinglist.other.Constants.BASE_URL
 import ir.vbile.app.shopinglist.other.Constants.DATABASE_NAME
 import retrofit2.*
@@ -43,6 +45,10 @@ object AppModule {
                 .create(PixabayAPI::class.java)
     }
 
+
+    @Singleton
+    @Provides
+    fun provideDefaultShoppingRepository(dao: ShoppingDao,api: PixabayAPI)=DefaultShoppingRepository(dao,api)as ShoppingRepository
 
 
 
