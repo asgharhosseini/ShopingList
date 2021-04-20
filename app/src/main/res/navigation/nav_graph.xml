@@ -1,28 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_graph">
-<!--    app:startDestination="@id/shoppingFragment"-->
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/shoppingFragment">
 
-
-<!--    <fragment
+    <fragment
         android:id="@+id/shoppingFragment"
-        android:name="ir.vbile.app.roomtesting.ui.fragment.ShoppingFragment"
-        android:label="ShoppingFragment" >
+        android:name="ir.vbile.app.shopinglist.ui.fragment.ShoppingFragment"
+        tools:layout="@layout/fragment_shopping"
+        android:label="ShoppingFragment">
         <action
             android:id="@+id/action_shoppingFragment_to_addShoppingItemFragment"
             app:destination="@id/addShoppingItemFragment" />
     </fragment>
     <fragment
         android:id="@+id/addShoppingItemFragment"
-        android:name="ir.vbile.app.roomtesting.ui.fragment.AddShoppingItemFragment"
-        android:label="AddShoppingItemFragment" >
+        android:name="ir.vbile.app.shopinglist.ui.fragment.AddShoppingItemFragment"
+        tools:layout="@layout/fragment_add_shopping_item"
+        android:label="AddShoppingItemFragment">
         <action
             android:id="@+id/action_addShoppingItemFragment_to_imagePickFragment"
             app:destination="@id/imagePickFragment" />
     </fragment>
     <fragment
         android:id="@+id/imagePickFragment"
-        android:name="ir.vbile.app.roomtesting.ui.fragment.ImagePickFragment"
-        android:label="ImagePickFragment" />-->
+        android:name="ir.vbile.app.shopinglist.ui.fragment.ImagePickFragment"
+        android:label="ImagePickFragment"
+        tools:layout="@layout/fragment_image_pick" />
+
 </navigation>
