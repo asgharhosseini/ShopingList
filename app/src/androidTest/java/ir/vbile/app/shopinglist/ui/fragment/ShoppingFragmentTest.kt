@@ -48,7 +48,7 @@ class ShoppingFragmentTest {
 
     @Test
     fun swipeShoppingItem_deleteItemInDb() {
-        val shoppingItem = ShoppingItem("TEST", 1, 1f, "TEST", 1)
+        val shoppingItem = ShoppingItem("TEST1", 1, 1f, "TEST1", 1)
         var testViewModel: ShoppingViewModel? = null
         launchFragmentInHiltContainer<ShoppingFragment>(
             fragmentFactory = testFragmentFactory
