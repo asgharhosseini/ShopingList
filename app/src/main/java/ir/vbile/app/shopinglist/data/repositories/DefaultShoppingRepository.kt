@@ -1,5 +1,6 @@
 package ir.vbile.app.shopinglist.data.repositories
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import ir.vbile.app.shopinglist.data.local.ShoppingDao
 import ir.vbile.app.shopinglist.data.model.ImageResponse
@@ -41,6 +42,7 @@ class DefaultShoppingRepository @Inject constructor(
                 Resource.error("An unknown error occured", null)
             }
         } catch(e: Exception) {
+            Log.e("EXCEPTION", "EXCEPTION:", e)
             Resource.error("Couldn't reach the server. Check your internet connection", null)
         }
     }
